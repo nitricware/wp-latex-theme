@@ -1,0 +1,278 @@
+/*
+Theme Name: WP-LATEX-THEME
+Author: Kurt Höblinger aka NitricWare
+Author URI: http://nitricware.com/
+Description: A theme mimicing the LaTeX style.
+Version: 0.1
+*/
+
+body {
+    color: black;
+    background: #efefef;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-title {
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.site-description {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.columns {
+    width: 1024px;
+    margin: auto;
+}
+
+.main-column {
+    float: left;
+    width: 712px;
+}
+
+.floatclear {
+    clear: both;
+}
+
+.post-teaser, .blog-post, .side-column {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 100%);
+    border-radius: 5px;
+    box-shadow: 0 0 7px #ccc;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-family: 'Old Standard TT', serif;
+}
+
+.side-column {
+    float: right;
+    width: 282px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.post-teaser {
+    margin-bottom: 50px;
+}
+
+.blog-post { 
+    max-width: 800px;
+    margin: auto;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    counter-reset: identifier;
+}
+
+.blog-post > p {
+    line-height: 1.5em;
+    font-size: 1.2em;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.post-teaser > h3 {
+    text-align: center;
+}
+
+.post-teaser > p {
+    line-height: 1.5em;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.pagenav {
+    width: 100%;
+}
+
+.pagenav > #pageback {
+    float: left;
+}
+
+.pagenav > #pageforward {
+    float: right;
+}
+
+/*
+    HEADLINES
+*/
+
+/* H1 */
+
+.blog-post > h1.post-title {
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 100;
+}
+
+.blog-post > h1 {
+    font-size: 2.2em;
+    font-weight: 1000;
+}
+
+.blog-post > h1:before {
+    counter-increment: identifier;
+    content: counter(identifier);
+    margin-right: 30px;
+}
+
+.blog-post > h1.post-title:before {
+    display: none;
+}
+
+/* H2 */
+
+.blog-post > h2.post-meta {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 100;
+}
+
+.blog-post > h2 {
+    font-size: 1.7em;
+    font-weight: 1000;
+}
+
+.blog-post > h2:before {
+    counter-increment: identifier;
+    content: counter(identifier);
+    margin-right: 30px;
+}
+
+.blog-post > h2.post-meta:before {
+    display: none;
+}
+
+/* H3 */
+
+.blog-post > h3 {
+    font-size: 1.5em;
+    font-weight: 1000;
+}
+
+.blog-post > h3:before {
+    counter-increment: identifier;
+    content: counter(identifier);
+    margin-right: 30px;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.9em;
+    margin-top: 100px;
+}
+/**
+    SIDEBAR
+**/
+#sidebar ul {
+    list-style: none;
+    font-family: 'Titillium Web', sans-serif;
+    padding: 0;
+    list-style-type: none;
+}
+
+#sidebar {
+    width: 100%;
+}
+
+#sidebar h2 {
+    font-size: 1em;
+    margin-bottom: 3px;
+}
+
+#sidebar li {
+    padding: none;
+    margin: none;
+}
+
+#sidebar a {
+    font-size: 0.9em;
+}
+
+#sidebar p a {
+    font-size: inherit;
+}
+
+#sidebar label {
+    display: none;
+}
+
+#sidebar form {
+    text-align: center;
+}
+
+@media screen and (max-width: 1050px) {
+    .columns {
+        width: 100%;
+    }
+    
+    .main-column {
+        float: none;
+        width: 100%;
+    }
+
+    .side-column {
+        float: none;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .blog-post {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    #sidebar {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .post-teaser, .blog-post {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #fff;
+        background: #282828;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #fff !important;
+    }
+
+    .post-teaser, .blog-post, .side-column {
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(37,37,37,1) 0%, rgba(0,0,0,1) 100%);
+        box-shadow: 0 0 7px #555;
+    }
+}
