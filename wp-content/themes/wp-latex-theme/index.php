@@ -36,9 +36,8 @@
             <?php endif; ?>
         </div>
         <div class="side-column">
-            <?php
-                get_sidebar();
-            ?>
+	        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Sidebar Widgets") ) : ?>
+	        <?php endif;?>
         </div>
     </div>
     <div class="floatclear"></div>

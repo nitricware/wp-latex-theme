@@ -14,4 +14,3 @@
             <?php bloginfo( 'name' ); ?>
         </a>
     </h1>
-    <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
