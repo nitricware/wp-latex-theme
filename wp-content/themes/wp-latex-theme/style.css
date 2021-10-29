@@ -3,7 +3,9 @@ Theme Name: WP-LATEX-THEME
 Author: Kurt Höblinger aka NitricWare
 Author URI: http://nitricware.com/
 Description: A theme mimicking the LaTeX style.
-Version: 0.1
+Version: 0.2
+
+Uses: https://github.com/ThisIsDallas/Simple-Grid
 */
 
 body {
@@ -50,13 +52,13 @@ a:hover {
 }
 
 p {
-    line-height: 1.5em;
+    line-height: 1.7em;
     text-align: justify;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 ul, ol > li {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 blockquote {
@@ -87,12 +89,12 @@ blockquote {
 
 .blog-post > h1.post-title {
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2.4em;
     font-weight: 100;
 }
 
 .blog-post > h1 {
-    font-size: 2.2em;
+    font-size: 2.4em;
     font-weight: 1000;
 }
 
@@ -110,12 +112,12 @@ blockquote {
 
 .blog-post > h2.post-meta {
     text-align: center;
-    font-size: 1.7em;
+    font-size: 1.9em;
     font-weight: 100;
 }
 
 .blog-post > h2 {
-    font-size: 1.7em;
+    font-size: 1.9em;
     font-weight: 1000;
 }
 
@@ -132,7 +134,7 @@ blockquote {
 /* H3 */
 
 .blog-post > h3 {
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: 1000;
 }
 
