@@ -24,22 +24,7 @@ a:hover {
     font-size: 3em;
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
-}
-
-.site-description {
-    font-size: 2em;
-    text-align: center;
-    font-family: 'Titillium Web', sans-serif;
-}
-
-.columns {
-    width: 80%;
-    margin: auto;
-}
-
-.main-column {
-    float: left;
-    width: 70%;
+    text-transform: uppercase;
 }
 
 .floatclear {
@@ -55,37 +40,31 @@ a:hover {
     font-family: 'Old Standard TT', serif;
 }
 
-.side-column {
-    float: right;
-    width: 30%;
-}
-
 .post-teaser {
     margin-bottom: 50px;
 }
 
-.blog-post { 
-    max-width: 800px;
-    margin: auto;
+.blog-post {
     padding: 5em 10em;
     counter-reset: identifier;
 }
 
-.blog-post > p {
+p {
     line-height: 1.5em;
-    font-size: 1.2em;
     text-align: justify;
-    text-indent: 2em;
+    font-size: 1.2em;
+}
+
+ul, ol > li {
+    font-size: 1.2em;
+}
+
+blockquote {
+    font-style: italic;
 }
 
 .post-teaser > h3 {
     text-align: center;
-}
-
-.post-teaser > p {
-    line-height: 1.5em;
-    text-align: justify;
-    font-size: 1.2em;
 }
 
 .pagenav {
@@ -188,19 +167,6 @@ footer {
     margin-bottom: 3px;
 }
 
-#sidebar li {
-    padding: none;
-    margin: none;
-}
-
-#sidebar a {
-    font-size: 0.9em;
-}
-
-#sidebar p a {
-    font-size: inherit;
-}
-
 #sidebar label {
     display: none;
 }
@@ -210,22 +176,6 @@ footer {
 }
 
 @media screen and (max-width: 1050px) {
-    .columns {
-        width: 100%;
-    }
-    
-    .main-column {
-        float: none;
-        width: 100%;
-    }
-
-    .side-column {
-        float: none;
-        width: 100%;
-        margin-top: 10px;
-        margin-left: 0;
-    }
-
     .blog-post {
         padding-left: 5em;
         padding-right: 5em;

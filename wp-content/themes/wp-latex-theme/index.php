@@ -7,7 +7,6 @@
                     <h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
                     <?php the_content( __( 'weiterlesen <span class="meta-nav">&rarr;</span>', 'wp-latex-theme' ) ); ?>
                     <?php wp_link_pages(); ?>
-                    <?php edit_post_link(); ?>
                 </div>
                 
                 <?php
