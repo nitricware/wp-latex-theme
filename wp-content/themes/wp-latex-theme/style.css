@@ -2,7 +2,7 @@
 Theme Name: WP-LATEX-THEME
 Author: Kurt Höblinger aka NitricWare
 Author URI: http://nitricware.com/
-Description: A theme mimicing the LaTeX style.
+Description: A theme mimicking the LaTeX style.
 Version: 0.1
 */
 
@@ -33,13 +33,13 @@ a:hover {
 }
 
 .columns {
-    width: 1024px;
+    width: 80%;
     margin: auto;
 }
 
 .main-column {
     float: left;
-    width: 712px;
+    width: 70%;
 }
 
 .floatclear {
@@ -51,20 +51,13 @@ a:hover {
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 100%);
     border-radius: 5px;
     box-shadow: 0 0 7px #ccc;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding: 50px 80px 30px;
     font-family: 'Old Standard TT', serif;
 }
 
 .side-column {
     float: right;
-    width: 282px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 50px;
-    padding-bottom: 30px;
+    width: 30%;
 }
 
 .post-teaser {
@@ -74,10 +67,7 @@ a:hover {
 .blog-post { 
     max-width: 800px;
     margin: auto;
-    padding-left: 10em;
-    padding-right: 10em;
-    padding-top: 5em;
-    padding-bottom: 5em;
+    padding: 5em 10em;
     counter-reset: identifier;
 }
 
@@ -234,10 +224,6 @@ footer {
         width: 100%;
         margin-top: 10px;
         margin-left: 0;
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top: 5px;
-        padding-bottom: 5px;
     }
 
     .blog-post {
@@ -252,10 +238,7 @@ footer {
 
 @media screen and (max-width: 400px) {
     .post-teaser, .blog-post {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding: 50px 10px;
     }
 }
 
