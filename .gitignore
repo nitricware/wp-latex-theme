@@ -1,4 +1,4 @@
 .DS_Store
 plugins/
 wp-content/*
-!wp-content/themes/wp-latex-theme/
+!wp-content/themes/wp-latex-theme/*
