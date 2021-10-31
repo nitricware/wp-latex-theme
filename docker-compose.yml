@@ -26,8 +26,7 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
     working_dir: /var/www/html
     volumes:
-      - ./wp-content:/var/www/html/wp-content
-      - ./wp-admin:/var/www/html/wp-admin
+      - ./src:/var/www/html
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 volumes:
   db_data:

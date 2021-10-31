@@ -1,5 +1,2 @@
-.DS_Store
-plugins/
-wp-content/*
-wp-admin
-!wp-content/themes/wp-latex-theme/*
+src
+!src/wp-content/themes/wp-latex-theme
