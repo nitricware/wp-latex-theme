@@ -5,7 +5,7 @@
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <div class="post-teaser">
                     <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-                    <?php the_content( __( 'weiterlesen <span class="meta-nav">&rarr;</span>', 'wp-latex-theme' ) ); ?>
+                    <?php the_content( __( 'weiterlesen&nbsp;<span class="meta-nav">&rarr;</span>', 'wp-latex-theme' ) ); ?>
                     <?php wp_link_pages(); ?>
                 </div>
                 
