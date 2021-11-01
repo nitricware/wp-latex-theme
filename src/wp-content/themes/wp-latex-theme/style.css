@@ -57,9 +57,14 @@ p {
     font-size: 1.5em;
 }
 
-ul, ol > li {
+article > ol > li {
     font-size: 1.5em;
 }
+
+article > ul > li {
+    font-size: 1.5em;
+}
+
 
 blockquote {
     font-style: italic;
