@@ -23,23 +23,39 @@ a:hover {
 }
 
 .site-title {
-    font-size: 3em;
+    font-size: 12vmin;
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
-    text-transform: uppercase;
+    ' text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.site-title > a > .site-logo {
+    max-width: 25vh;
+    margin: 0;
+    padding: 0;
+}
+
+.site-title > a {
+    text-decoration: none;
 }
 
 .floatclear {
     clear: both;
 }
 
-.post-teaser, .blog-post, .side-column {
+.post-teaser, .blog-post, .side-column, .sidebar {
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 100%);
     border-radius: 5px;
     box-shadow: 0 0 7px #ccc;
-    padding: 50px 80px 30px;
+    padding: 2vh 5vw;
     font-family: 'Old Standard TT', serif;
+}
+
+.sidebar {
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .post-teaser {
@@ -47,22 +63,27 @@ a:hover {
 }
 
 .blog-post {
-    padding: 5em 10em;
+    padding: 15vh 5vw !important;
     counter-reset: identifier;
 }
 
+.sidebar {
+    background: #768F79;
+    background: linear-gradient(180deg, #768F79 0%, #768F79 100%);
+}
+
 p {
-    line-height: 1.7em;
+    line-height: 1.95em;
     text-align: justify;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
-article > ol > li {
-    font-size: 1.5em;
+ol > li {
+    font-size: 1.3em;
 }
 
-article > ul > li {
-    font-size: 1.5em;
+ul > li {
+    font-size: 1.3em;
 }
 
 
@@ -94,18 +115,18 @@ blockquote {
 
 .blog-post > h1.post-title {
     text-align: center;
-    font-size: 2.4em;
+    font-size: 2.3em;
     font-weight: 100;
 }
 
-.blog-post > h1 {
-    font-size: 2.4em;
+h1 {
+    font-size: 2.3em;
     font-weight: 1000;
 }
 
 .blog-post > h1:before {
-    counter-increment: identifier;
-    content: counter(identifier);
+    counter-increment: h1;
+    content: counter(h1);
     margin-right: 30px;
 }
 
@@ -117,18 +138,18 @@ blockquote {
 
 .blog-post > h2.post-meta {
     text-align: center;
-    font-size: 1.9em;
+    font-size: 2em;
     font-weight: 100;
 }
 
-.blog-post > h2 {
-    font-size: 1.9em;
+h2 {
+    font-size: 2em;
     font-weight: 1000;
 }
 
 .blog-post > h2:before {
-    counter-increment: identifier;
-    content: counter(identifier);
+    counter-increment: h2;
+    content: counter(h1) "." counter(h2);
     margin-right: 30px;
 }
 
@@ -138,14 +159,14 @@ blockquote {
 
 /* H3 */
 
-.blog-post > h3 {
+h3 {
     font-size: 1.7em;
     font-weight: 1000;
 }
 
 .blog-post > h3:before {
-    counter-increment: identifier;
-    content: counter(identifier);
+    counter-increment: h3;
+    content: counter(h1) "." counter(h2) "." counter(h3);
     margin-right: 30px;
 }
 
@@ -162,16 +183,10 @@ footer {
     list-style: none;
     font-family: 'Titillium Web', sans-serif;
     padding: 0;
-    list-style-type: none;
 }
 
 #sidebar {
     width: 100%;
-}
-
-#sidebar h2 {
-    font-size: 1em;
-    margin-bottom: 3px;
 }
 
 #sidebar label {
@@ -193,12 +208,6 @@ footer {
     }
 }
 
-@media screen and (max-width: 400px) {
-    .post-teaser, .blog-post {
-        padding: 50px 10px;
-    }
-}
-
 @media (prefers-color-scheme: dark) {
     body {
         color: #fff;
@@ -210,9 +219,14 @@ footer {
         color: #fff !important;
     }
 
-    .post-teaser, .blog-post, .side-column {
+    .post-teaser, .blog-post, .side-column, .sidebar {
         background: rgb(0,0,0);
         background: linear-gradient(180deg, rgba(37,37,37,1) 0%, rgba(0,0,0,1) 100%);
         box-shadow: 0 0 7px #555;
+    }
+
+    .sidebar {
+        background: #0C4B52;
+        background: linear-gradient(180deg, #083439 0%, #0C4B52 100%);
     }
 }
