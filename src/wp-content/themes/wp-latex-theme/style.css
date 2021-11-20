@@ -115,7 +115,7 @@ blockquote {
 
 .blog-post > h1.post-title {
     text-align: center;
-    font-size: 2.3em;
+    font-size: 2.5em;
     font-weight: 100;
 }
 
@@ -138,7 +138,7 @@ h1 {
 
 .blog-post > h2.post-meta {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 100;
 }
 
