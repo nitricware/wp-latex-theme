@@ -1,232 +1,201 @@
+@charset "UTF-8";
 /*
 Theme Name: WP-LATEX-THEME
 Author: Kurt Höblinger aka NitricWare
 Author URI: http://nitricware.com/
 Description: A theme mimicking the LaTeX style.
-Version: 0.2
+Version: 0.4
 
 Uses: https://github.com/ThisIsDallas/Simple-Grid
 */
-
+/**
+  Variables
+ */
 body {
-    color: black;
-    background: #efefef;
+  color: #000000;
+  background: #efefef;
+  font-size: 20px;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
-
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .site-title {
-    font-size: 12vmin;
-    text-align: center;
-    font-family: 'Titillium Web', sans-serif;
-    ' text-transform: uppercase;
-    padding: 0;
-    margin: 0;
+  font-size: 12vmin;
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  padding: 0;
+  margin: 0;
 }
-
-.site-title > a > .site-logo {
-    max-width: 25vh;
-    margin: 0;
-    padding: 0;
-}
-
 .site-title > a {
-    text-decoration: none;
+  text-decoration: none;
+}
+.site-title > a > .site-logo {
+  max-width: 25vh;
+  margin: 0;
+  padding: 0;
 }
 
 .floatclear {
-    clear: both;
+  clear: both;
 }
 
-.post-teaser, .blog-post, .side-column, .sidebar {
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 100%);
-    border-radius: 5px;
-    box-shadow: 0 0 7px #ccc;
-    padding: 2vh 5vw;
-    font-family: 'Old Standard TT', serif;
+.post-teaser, .blog-post, .side-column {
+  background: white;
+  background: linear-gradient(180deg, white 0%, #f1f1f1 100%);
+  border-radius: 5px;
+  box-shadow: 0 0 7px #ccc;
+  padding: 2vh 5vw;
+  font-family: "Old Standard TT", serif;
 }
 
 .sidebar {
-    font-family: 'Titillium Web', sans-serif;
+  background: white;
+  background: linear-gradient(180deg, white 0%, #f1f1f1 100%);
+  border-radius: 5px;
+  box-shadow: 0 0 7px #ccc;
+  padding: 2vh 5vw;
+  font-family: "Titillium Web", sans-serif;
 }
 
 .post-teaser {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .blog-post {
-    padding: 15vh 5vw !important;
-    counter-reset: identifier;
+  padding: 15vh 5vw !important;
+  counter-reset: identifier;
 }
 
 .sidebar {
-    background: #768F79;
-    background: linear-gradient(180deg, #768F79 0%, #768F79 100%);
+  background: #768F79;
+  background: linear-gradient(180deg, #768F79 0%, #768F79 100%);
 }
 
 p {
-    line-height: 1.95em;
-    text-align: justify;
-    font-size: 1.3em;
+  line-height: 30px;
+  text-align: justify;
 }
-
-ol > li {
-    font-size: 1.3em;
-}
-
-ul > li {
-    font-size: 1.3em;
-}
-
 
 blockquote {
-    font-style: italic;
+  font-style: italic;
 }
 
 .post-teaser > h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .pagenav {
-    width: 100%;
+  width: 100%;
 }
-
 .pagenav > #pageback {
-    float: left;
+  float: left;
 }
-
 .pagenav > #pageforward {
-    float: right;
+  float: right;
 }
 
 /*
     HEADLINES
 */
-
 /* H1 */
-
-.blog-post > h1.post-title {
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: 100;
-}
-
 h1 {
-    font-size: 2.3em;
-    font-weight: 1000;
+  font-size: 28px;
+  font-weight: 1000;
 }
 
+.blog-post > h1 {
+  counter-increment: h1;
+}
 .blog-post > h1:before {
-    counter-increment: h1;
-    content: counter(h1);
-    margin-right: 30px;
+  content: counter(h1);
+  margin-right: 30px;
 }
-
 .blog-post > h1.post-title:before {
-    display: none;
+  display: none;
+}
+.blog-post > h1.post-title {
+  counter-increment: none;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 100;
+}
+.blog-post > h2.post-meta {
+  counter-increment: none;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 100;
+  color: #555555;
 }
 
 /* H2 */
-
-.blog-post > h2.post-meta {
-    text-align: center;
-    font-size: 1.8em;
-    font-weight: 100;
-}
-
 h2 {
-    font-size: 2em;
-    font-weight: 1000;
+  font-size: 26px;
+  font-weight: 1000;
 }
 
+.blog-post > h2 {
+  counter-increment: h2;
+}
 .blog-post > h2:before {
-    counter-increment: h2;
-    content: counter(h1) "." counter(h2);
-    margin-right: 30px;
+  content: counter(h1) "." counter(h2);
+  margin-right: 30px;
 }
-
 .blog-post > h2.post-meta:before {
-    display: none;
+  display: none;
 }
 
 /* H3 */
-
 h3 {
-    font-size: 1.7em;
-    font-weight: 1000;
+  counter-increment: h3;
+  font-size: 24px;
+  font-weight: 1000;
 }
 
 .blog-post > h3:before {
-    counter-increment: h3;
-    content: counter(h1) "." counter(h2) "." counter(h3);
-    margin-right: 30px;
+  content: counter(h1) "." counter(h2) "." counter(h3);
+  margin-right: 30px;
 }
 
 footer {
-    text-align: center;
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 0.9em;
-    margin-top: 100px;
-}
-/**
-    SIDEBAR
-**/
-#sidebar ul {
-    list-style: none;
-    font-family: 'Titillium Web', sans-serif;
-    padding: 0;
-}
-
-#sidebar {
-    width: 100%;
-}
-
-#sidebar label {
-    display: none;
-}
-
-#sidebar form {
-    text-align: center;
-}
-
-@media screen and (max-width: 1050px) {
-    .blog-post {
-        padding-left: 5em;
-        padding-right: 5em;
-    }
-
-    #sidebar {
-        text-align: center;
-    }
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.9em;
+  margin-top: 100px;
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        color: #fff;
-        background: #282828;
-    }
-    
-    a {
-        text-decoration: none;
-        color: #fff !important;
-    }
+  body {
+    color: #fff;
+    background: #282828;
+  }
 
-    .post-teaser, .blog-post, .side-column, .sidebar {
-        background: rgb(0,0,0);
-        background: linear-gradient(180deg, rgba(37,37,37,1) 0%, rgba(0,0,0,1) 100%);
-        box-shadow: 0 0 7px #555;
-    }
+  a {
+    color: #fff !important;
+  }
 
-    .sidebar {
-        background: #0C4B52;
-        background: linear-gradient(180deg, #083439 0%, #0C4B52 100%);
-    }
+  .post-teaser, .blog-post, .side-column {
+    background: black;
+    background: linear-gradient(180deg, #252525 0%, black 100%);
+    box-shadow: 0 0 7px #555;
+  }
+
+  .sidebar {
+    background: black;
+    background: linear-gradient(180deg, #252525 0%, black 100%);
+    box-shadow: 0 0 7px #555;
+    background: #0C4B52;
+    background: linear-gradient(180deg, #083439 0%, #0C4B52 100%);
+  }
+
+  .blog-post > h2.post-meta {
+    color: #aaaaaa;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

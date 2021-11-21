@@ -1,0 +1,222 @@
+/*
+Theme Name: WP-LATEX-THEME
+Author: Kurt Höblinger aka NitricWare
+Author URI: http://nitricware.com/
+Description: A theme mimicking the LaTeX style.
+Version: 0.4
+
+Uses: https://github.com/ThisIsDallas/Simple-Grid
+*/
+
+/**
+  Variables
+ */
+
+$baseFontSize: 20px;
+
+body {
+  color: #000000;
+  background: #efefef;
+  font-size: $baseFontSize;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.site-title {
+  font-size: 12vmin;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  padding: 0;
+  margin: 0;
+
+  > a {
+    > .site-logo {
+      max-width: 25vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    text-decoration: none;
+  }
+}
+
+.floatclear {
+  clear: both;
+}
+
+.post-teaser, .blog-post, .side-column {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 100%);
+  border-radius: 5px;
+  box-shadow: 0 0 7px #ccc;
+  padding: 2vh 5vw;
+  font-family: 'Old Standard TT', serif;
+}
+
+.sidebar {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 100%);
+  border-radius: 5px;
+  box-shadow: 0 0 7px #ccc;
+  padding: 2vh 5vw;
+  // font-family: 'Old Standard TT', serif;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.post-teaser {
+  margin-bottom: 50px;
+}
+
+.blog-post {
+  padding: 15vh 5vw !important;
+  counter-reset: identifier;
+}
+
+.sidebar {
+  background: #768F79;
+  background: linear-gradient(180deg, #768F79 0%, #768F79 100%);
+}
+
+p {
+  line-height: $baseFontSize * 1.5;
+  text-align: justify;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+.post-teaser > h3 {
+  text-align: center;
+}
+
+.pagenav {
+  width: 100%;
+
+  > {
+    #pageback {
+      float: left;
+    }
+
+    #pageforward {
+      float: right;
+    }
+  }
+}
+
+/*
+    HEADLINES
+*/
+
+/* H1 */
+
+h1 {
+  font-size: $baseFontSize + 8;
+  font-weight: 1000;
+}
+
+.blog-post > {
+  h1 {
+    counter-increment: h1;
+    &:before {
+      content: counter(h1);
+      margin-right: 30px;
+    }
+
+    &.post-title:before {
+      display: none;
+    }
+  }
+
+  h1.post-title {
+    counter-increment: none;
+    text-align: center;
+    font-size: $baseFontSize + 10;
+    font-weight: 100;
+  }
+
+  h2.post-meta {
+    counter-increment: none;
+    text-align: center;
+    font-size: $baseFontSize + 5;
+    font-weight: 100;
+    color: #555555;
+  }
+}
+
+/* H2 */
+
+h2 {
+  font-size: $baseFontSize + 6;
+  font-weight: 1000;
+}
+
+.blog-post > h2 {
+  counter-increment: h2;
+  &:before {
+    content: counter(h1) "." counter(h2);
+    margin-right: 30px;
+  }
+
+  &.post-meta:before {
+    display: none;
+  }
+}
+
+/* H3 */
+
+h3 {
+  counter-increment: h3;
+  font-size: $baseFontSize + 4;
+  font-weight: 1000;
+}
+
+.blog-post > h3:before {
+  content: counter(h1) "." counter(h2) "." counter(h3);
+  margin-right: 30px;
+}
+
+footer {
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 0.9em;
+  margin-top: 100px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #fff;
+    background: #282828;
+  }
+
+  a {
+    color: #fff !important;
+  }
+
+  .post-teaser, .blog-post, .side-column {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(37, 37, 37, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    box-shadow: 0 0 7px #555;
+  }
+
+  .sidebar {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(37, 37, 37, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    box-shadow: 0 0 7px #555;
+    background: #0C4B52;
+    background: linear-gradient(180deg, #083439 0%, #0C4B52 100%);
+  }
+
+  .blog-post > {
+    h2.post-meta {
+      color: #aaaaaa;
+    }
+  }
+}

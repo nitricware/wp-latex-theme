@@ -5,7 +5,7 @@ function NWLatexTheme_theme_support(){
 }
 
 function NWLatexTheme_custom_theme_assets() {
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), [], wp_get_theme()->Version );
 	wp_enqueue_style( 'simple-grid', get_stylesheet_directory_uri() . '/simplegrid.css' );
 }
  
@@ -24,7 +24,7 @@ if ( function_exists('register_sidebar') )
 
 add_theme_support( 'custom-logo' );
 	
-function themename_custom_logo_setup() {
+function NWLatexTheme_custom_logo_setup() {
 	$defaults = array(
 		'height'               => 100,
 		'width'                => 400,
