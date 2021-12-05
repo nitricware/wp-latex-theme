@@ -4,7 +4,7 @@ Theme Name: WP-LATEX-THEME
 Author: Kurt Höblinger aka NitricWare
 Author URI: http://nitricware.com/
 Description: A theme mimicking the LaTeX style.
-Version: 0.6
+Version: 0.11
 
 Uses: https://github.com/ThisIsDallas/Simple-Grid
 */
@@ -19,10 +19,14 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 a:hover {
   text-decoration: underline;
+}
+
+article a {
+  color: #142c4f;
 }
 
 .site-title {
@@ -178,7 +182,11 @@ footer {
   }
 
   a {
-    color: #fff !important;
+    color: #ffffff !important;
+  }
+
+  article a {
+    color: #98b4e7 !important;
   }
 
   .post-teaser, .blog-post, .side-column {
