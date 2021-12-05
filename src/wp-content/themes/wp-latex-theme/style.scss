@@ -3,7 +3,7 @@ Theme Name: WP-LATEX-THEME
 Author: Kurt Höblinger aka NitricWare
 Author URI: http://nitricware.com/
 Description: A theme mimicking the LaTeX style.
-Version: 0.5
+Version: 0.6
 
 Uses: https://github.com/ThisIsDallas/Simple-Grid
 */
@@ -60,9 +60,14 @@ a {
   font-family: 'Old Standard TT', serif;
 }
 
+.sticky {
+  background: #dbc7e7 !important;
+  background: linear-gradient(180deg, rgb(249, 196, 201) 0%, rgb(219, 199, 231) 100%) !important;
+}
+
 .sidebar {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 100%);
+  background: #b0edf4;
+  background: linear-gradient(180deg, #b0edf4 0%, #b6eef4 100%);
   border-radius: 5px;
   box-shadow: 0 0 7px #ccc;
   padding: 2vh 5vw;
@@ -77,11 +82,6 @@ a {
 .blog-post {
   padding: 15vh 5vw !important;
   counter-reset: identifier;
-}
-
-.sidebar {
-  background: #768F79;
-  background: linear-gradient(180deg, #768F79 0%, #768F79 100%);
 }
 
 p {
@@ -206,6 +206,11 @@ footer {
     background: rgb(0, 0, 0);
     background: linear-gradient(180deg, rgba(37, 37, 37, 1) 0%, rgba(0, 0, 0, 1) 100%);
     box-shadow: 0 0 7px #555;
+  }
+
+  .sticky {
+    background: #402351 !important;
+    background: linear-gradient(180deg, rgb(173, 17, 30) 0%, rgb(64, 35, 81) 100%) !important;
   }
 
   .sidebar {
