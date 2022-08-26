@@ -3,10 +3,12 @@ Theme Name: WP-LATEX-THEME
 Author: Kurt Höblinger aka NitricWare
 Author URI: http://nitricware.com/
 Description: A theme mimicking the LaTeX style.
-Version: 0.11
+Version: 0.13
 
 Uses: https://github.com/ThisIsDallas/Simple-Grid
 */
+
+@import "custom-fonts.css";
 
 /**
   Variables
@@ -40,6 +42,7 @@ article {
   font-size: 12vmin;
   text-align: center;
   font-family: 'Titillium Web', sans-serif;
+  font-weight: 200;
   padding: 0;
   margin: 0;
 
@@ -80,6 +83,7 @@ article {
   padding: 2vh 5vw;
   // font-family: 'Old Standard TT', serif;
   font-family: 'Titillium Web', sans-serif;
+  font-weight: 200;
 }
 
 .post-teaser {
@@ -163,7 +167,7 @@ h1 {
 
 h2 {
   font-size: $baseFontSize + 6;
-  font-weight: 1000;
+  font-weight: 200;
 }
 
 .blog-post > h2 {
@@ -184,7 +188,7 @@ h2 {
 h3 {
   counter-increment: h3;
   font-size: $baseFontSize + 4;
-  font-weight: 1000;
+  font-weight: 200;
 }
 
 .blog-post > h3:before {
@@ -195,6 +199,7 @@ h3 {
 footer {
   text-align: center;
   font-family: 'Titillium Web', sans-serif;
+  font-weight: 200;
   font-size: 0.9em;
   margin-top: 100px;
 }
