@@ -1,2 +1,4 @@
 src
+**/.DS_Store
 !src/wp-content/themes/wp-latex-theme/
+.idea
